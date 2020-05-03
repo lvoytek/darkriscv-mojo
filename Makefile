@@ -64,15 +64,24 @@ BIT = tmp/darksocv.bit                      # requires FPGA build tool
 
 default: all
 
+.PHONY:all
 all:
 	make -C src all             CROSS=$(CROSS) CCPATH=$(CCPATH) ARCH=$(ARCH) $(MTYPE)
 	make -C sim all             ICARUS=$(ICARUS) $(MTYPE)
 	make -C boards all          BOARD=$(BOARD) $(MTYPE)
 
+.PHONY:install
 install:
 	make -C boards install      BOARD=$(BOARD)
 
+.PHONY:clean
 clean:
 	make -C src clean
 	make -C sim clean
 	make -C boards clean        BOARD=$(BOARD)
+
+.PHONY:binupdate
+binupdate:darkriscv-mojo.bin
+
+darkriscv-mojo.bin:tmp/darksocv.bin
+	cp tmp/darksocv.bin darkriscv-mojo.bin
