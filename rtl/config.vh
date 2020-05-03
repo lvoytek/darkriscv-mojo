@@ -164,6 +164,17 @@
     `define SIMULATION 4
 `endif
 
+`ifdef MOJO_V3_BOARD
+    `define BOARD_ID 5
+    `define BOARD_CK_REF 50000000
+    `define BOARD_CK_MUL 2
+    `ifdef __3STAGE__
+        `define BOARD_CK_DIV 2 // 50MHz 
+    `else
+        `define BOARD_CK_DIV 4 // 25MHz
+    `endif
+`endif
+
 `ifdef AVNET_MICROBOARD_LX9
     `define BOARD_ID 1
     //`define BOARD_CK 100000000
