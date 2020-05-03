@@ -1,0 +1,17 @@
+CONFIG VCCAUX=3.3;
+
+NET XCLK LOC = P56 | PERIOD = 50MHz HIGH 50%;
+NET XRES LOC = P38 | IOSTANDARD = LVTTL;
+
+NET UART_RXD        LOC = P59;
+NET UART_TXD        LOC = P55;
+
+NET LED[3]          LOC = P131;
+NET LED[2]          LOC = P132;
+NET LED[1]          LOC = P133;
+NET LED[0]          LOC = P134;
+
+NET DEBUG[3]        LOC = P123;
+NET DEBUG[2]        LOC = P124;
+NET DEBUG[1]        LOC = P126;
+NET DEBUG[0]        LOC = P127;
