@@ -88,6 +88,12 @@
     `define BOARD_CK 50000000
 `endif
 
+`ifdef MOJO_V3_BOARD
+    `define BOARD_ID 5
+    `define BOARD_CK 50000000
+`endif
+
+
 `ifndef BOARD_ID
     `define BOARD_ID 0    
     `define BOARD_CK 100000000   
