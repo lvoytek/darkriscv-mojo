@@ -46,7 +46,7 @@
 //
 // UART speed is set in bits per second, typically 115200 bps:
 
-`define __UARTSPEED__ 115200
+`define __UARTSPEED__ 500000
 
 // darkriscv/darksocv configuration
 // 
@@ -168,11 +168,7 @@
     `define BOARD_ID 5
     `define BOARD_CK_REF 50000000
     `define BOARD_CK_MUL 2
-    `ifdef __3STAGE__
-        `define BOARD_CK_DIV 2 // 50MHz 
-    `else
-        `define BOARD_CK_DIV 4 // 25MHz
-    `endif
+    `define BOARD_CK_DIV 2 // 50MHz 
 `endif
 
 `ifdef AVNET_MICROBOARD_LX9
