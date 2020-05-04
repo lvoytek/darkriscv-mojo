@@ -47,7 +47,8 @@ HARVARD = 1
  ICARUS = /usr/local/bin/iverilog
 #BOARD  = avnet_microboard_lx9
 #BOARD  = xilinx_ac701_a200
- BOARD  = qmtech_sdram_lx16
+#BOARD  = qmtech_sdram_lx16
+ BOARD  = mojo_v3
 
 # now you can just type 'make'
 
